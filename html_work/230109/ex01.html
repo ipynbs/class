@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        1. 자식 태그에 position absolute 주면
+        부모태그에 height position relative를 줘야한다
+        2. 자식태그에 float : left right를 주면
+        부모태그에 overflow hidden을 줘야한다
+        3. hover checked 다른 것을 변경 할수 있다
+        ->javasciprt를 알아야 함
+    -->
+    <style>
+        #p1{
+            background-color: #ccc;
+            position: relative;
+            height: 500px;
+        }
+        #c1{
+            margin-bottom: 50px;
+            margin-right: 50px;
+            background-color: #aaa;
+            position: absolute;
+            width: 250px;
+            height: 300px;
+            bottom: 0;
+            right: 0;
+        }
+        #c2{
+            background-color: #aaa;
+            position: absolute;
+            width: 250px;
+            height: 300px;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+    <div id="p1">
+        <div id="c1">
+            <h1>lorem ipsum</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias sed quia est inventore sit odit consequuntur dignissimos, quam nostrum vel quisquam perferendis culpa ullam dolorum dicta, ipsum itaque ex aliquam?
+            </p>
+        </div>
+        <div id="c2">
+            <h1>lorem ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi repellat, consequuntur dolorum ex blanditiis voluptatem minus, accusamus quidem tenetur maiores iste in repellendus debitis inventore architecto nisi eligendi exercitationem amet!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

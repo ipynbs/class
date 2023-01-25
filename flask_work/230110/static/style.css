@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Moon+Dance&display=swap');
+*{
+    font-family: sans-serif, 'Black And White Picture';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+a:link{
+    color: black;
+}
+#toggle{
+    display: none;
+}
+#main_header{
+    text-align: center;
+    position: relative;
+}
+#main_header>label{
+    cursor: pointer;
+    position: absolute;
+    right: 0.5em;
+    top: 0;
+}
+#main_header>a{
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+}
+#toggle + #wrap > #top_gnb{
+    display: none;
+}
+#toggle:checked + #wrap > #top_gnb{
+    display: block;
+}
