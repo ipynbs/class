@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex01</h1>
+    <input type="text" name="" id="my-input">
+    <button id="my=btn" onclick="doArea()">원반지름</button>
+    <div id="my-div"></div>
+</body>
+</html>
+<script>
+    const $myInput = document.getElementById('my-input')
+    
+
+    const $myDiv = document.getElementById('my-div')
+    $myDiv.innerHTML = "test"
+    const doArea = function(){
+        const inputvalue = $myInput.value
+        const area = Math.PI * inputvalue * inputvalue
+        const cir = inputvalue * 2 * Math.PI
+        // $myDiv.innerHTML = `<h1>반지름 = ${inputvalue}</h1>`
+        let outputvalue = `<h1>입력값 = ${inputvalue}</h1>`
+        outputvalue +=  `<h2>원의 반지름 : ${inputvalue}</h2>`
+        outputvalue +=  `<h2>원의 넓이 : ${Math.round(area*100)/100}</h2>`
+        outputvalue +=  `<h2>원의 둘레 : ${Math.round(cir*100)/100}</h2>`
+        $myDiv.innerHTML = outputvalue
+    }
+</script>

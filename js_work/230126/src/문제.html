@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="my-div"></div>
+</body>
+</html>
+<script>
+    const a = prompt('원의 반지름을 입력하세요 : ')
+    console.log('원의 반지름 : ',a)
+    const b = a * a * 3.14
+    console.log('원의 넓이 : ',b)
+    const c = 2 * a * 3.14
+    console.log('원의 둘레 : ',c)
+
+    let li = ''
+    li += '<ul>'
+    li += `<li>원의 반지름 : ${a}</li>`
+    li += `<li>원의 넓이 : ${b}</li>`
+    li += `<li>원의 둘레 : ${c}</li>`
+    li += '</ul>'
+    console.log(li)
+    const $myDiv = document.getElementById('my-div')
+    $myDiv.innerHTML = li
+</script>

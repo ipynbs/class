@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Pacifico', cursive;
+            background-color: ivory;
+        }
+        .animals{
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: solid 1px black;
+            background-color: black;
+            border-radius: 200px;
+            box-sizing: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            /*background-image: url(images/닭.jpg);*/
+            margin: 80px auto 50px auto;
+            background-repeat: no-repeat;
+        }
+        .title{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+            /*display: none;*/
+        }
+        .animal{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            line-height: 40px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="animals" style="background-image: url(/images/닭.jpg);">닭</div>
+    <h1 class="title">닭띠의 운세는 !!</h1>
+    <p class="animal" id="animal10" style="display: block;">
+        "나보다 나이가 어린 손 아랫 사람과 만나 의논하면 <br>뜻밖의 정보를 구할 수 있어요"<br>
+        "직장인은 자신의 능력을 인정받고, 기발한 아이디어가 떠오르는 등"<br>
+        "활발한 하루가 진행될 거예요."
+    </p>
+    <!-- <button onclick="history.back()">처음으로</button> -->
+    <input type="button" value="처음으로" onclick="history.back()">
+</body>
+</html>

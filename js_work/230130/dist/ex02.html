@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="number" id="input-number">
+    <input type="text" name="number1" id="input-number1">
+
+    <button id="btn">확인</button>
+    <button id="btn1">확인</button>
+
+    <div id="print-div">
+    <div id="print-div1">
+
+    </div>
+</div><script src="/ex02.57de9bc7.js"></script></body>
+</html>
+<script>const $inputNumber = document.getElementById("input-number");
+const $inputNumber1 = document.getElementById("input-number1");
+const $btn = document.getElementById("btn");
+const $btn1 = document.getElementById("btn1");
+const $printDiv = document.getElementById("print-div");
+const $printDiv1 = document.getElementById("print-div1");
+$btn.addEventListener("click", function() {
+    //console.log($inputNumber.value)
+    switch($inputNumber.value % 2){
+        case 0:
+            $printDiv.innerHTML = "짝수입니다";
+            break;
+        case 1:
+            $printDiv.innerHTML = "홀수입니다";
+            break;
+        default:
+            $printDiv.innerHTML = "다시입력해주십시오";
+            break;
+    }
+});
+$btn1.addEventListener("click", function() {
+    //console.log($inputNumber.value)
+    let a = $inputNumber1.value > 0 ? 1 : 0;
+    a = $inputNumber1.value == 0 ? 3 : a;
+    switch(a){
+        case 1:
+            $printDiv1.innerHTML = "양수입니다";
+            break;
+        case 0:
+            $printDiv1.innerHTML = "음수입니다";
+            break;
+        default:
+            $printDiv1.innerHTML = "0 입니다";
+            break;
+    }
+}) // 1붙은거만 삭제하면됨
+;
+
+</script>
