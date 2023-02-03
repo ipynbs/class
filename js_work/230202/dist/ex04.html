@@ -1,0 +1,36 @@
+<script>const min = function(array) {
+    // const array = [20,30,273,80,90,10,5]
+    let min = array[0];
+    // let max = array[0]
+    for (const item of array)// console.log(item)
+    if (min > item) min = item;
+    return min;
+};
+const max = function(array) {
+    // const array = [20,30,273,80,90,10,5]
+    // let min = array[0]
+    let max = array[0];
+    for (const item of array)// console.log(item)
+    if (max < item) max = item;
+    return max;
+};
+console.log(`min = ${min([
+    20,
+    30,
+    273,
+    80,
+    90,
+    10,
+    5
+])}`);
+console.log(`max = ${max([
+    20,
+    30,
+    273,
+    80,
+    90,
+    10,
+    5
+])}`);
+
+</script><script src="/ex04.fe6b6678.js"></script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="my-div"></div>
+<script src="/ex06.555d3cf5.js"></script></body>
+</html>
+<script>const $myDiv = document.getElementById("my-div");
+const result = prompt("몇개줄 원하니?");
+let 별표개수 = 1;
+for(let indent = result; indent > 0; indent--){
+    let output = "";
+    // 빈칸 띄우기
+    for(let i = indent; i > 0; i--)//console.log("")
+    output += "&nbsp;";
+    // 별출력
+    for(let i = 0; i < 별표개수; i++)output += "*";
+    //output += '*'
+    별표개수 += 2;
+    $myDiv.innerHTML = $myDiv.innerHTML + output + "<br>";
+    console.log(output);
+}
+별표개수 -= 4;
+let sub = result - 1;
+for(let indent = result; indent > 0; indent--){
+    sub -= 1;
+    let output = "";
+    // 빈칸 띄우기
+    for(let i = 0; i < result - sub; i++)//console.log("")
+    output += "&nbsp;";
+    // 별출력
+    for(let i = 0; i < 별표개수; i++)output += "*";
+    //output += '*'
+    별표개수 -= 2;
+    $myDiv.innerHTML = $myDiv.innerHTML + output + "<br>";
+    console.log(output);
+}
+
+</script>
+<!-- let i = 0
+while (i<10){
+    //console.log('i',i)
+    let j = 0
+    let output = ""
+    while (i+1 > j){
+        //console.log('*')
+        output += '*'
+        j++
+    }
+    console.log(output)
+    i++
+} -->

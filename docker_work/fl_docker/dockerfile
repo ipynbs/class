@@ -1,0 +1,8 @@
+# https://velog.io/@kogoon/Flask%EB%A5%BC-Docker%EB%A1%9C-%EC%9B%B9%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0
+FROM python:3.10
+
+COPY app.py /app/app.py
+
+RUN pip3 install flask && pip3 install pymysql
+
+CMD ["python3", "/app/app.py"]
