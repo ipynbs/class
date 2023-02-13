@@ -1,0 +1,17 @@
+<script>const myobj = {
+    a: "10",
+    b: "20",
+    doA: function() {
+        console.log(`this.a = ${this.a} this.b = ${this.b}`);
+        console.log(this);
+    }
+};
+console.log(myobj);
+console.log(myobj.doA()) // 원래 오류뜨는데 위 콘솔쪽 a와 b에 this를 붙이면 실행됨
+;
+const myobj2 = {};
+console.log(myobj2) //const test = new myobj
+ //test.doA()
+;
+
+</script><script src="/ex01.0851002e.js"></script>

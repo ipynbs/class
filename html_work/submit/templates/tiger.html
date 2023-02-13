@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Pacifico', cursive;
+            background-color: ivory;
+        }
+        .animals{
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: solid 1px black;
+            background-color: black;
+            border-radius: 200px;
+            box-sizing: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            background-image: url(static/호랑이.jpg);
+            margin: 80px auto 50px auto;
+            background-repeat: no-repeat;
+        }
+        .title{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+            /*display: none;*/
+        }
+        .animal{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            line-height: 40px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="animals" style="background-image: url(/static/호랑이.jpg);">호랑이</div>
+    <h1 class="title">호랑이띠의 운세는 !!</h1>
+    <p class="animal" id="animal3" style="display: block;">
+        {{result}}
+        <!-- "오늘 만큼은 참아주세요."<br>
+        "비즈니스이든 애인이든 대인관계에 문제가 생길 수 있는 조심스러운 하루예요."<br>
+        "마음만 분주하고 별 소득이 없으니 내일을 위해 에너지를 보충하세요." -->
+    </p>
+    <input type="button" value="처음으로" onclick="history.back()">
+</body>
+</html>

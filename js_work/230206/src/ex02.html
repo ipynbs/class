@@ -1,0 +1,12 @@
+<script>
+    // 환원 함수
+    function print(){
+        console.log("print")
+    }
+    function forporint(myfn){
+        for (let i = 0; i < 3; i++){
+            myfn()
+        }
+    }
+    forporint(print)
+</script>

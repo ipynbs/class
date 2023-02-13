@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: .2rem;
+        }
+        input{
+            box-shadow: .2rem .2rem .2rem #333;
+            font-size: 1.8rem;
+            height: 2rem;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const $upperBtn = document.querySelector('#uppercase')
+            const $lowerBtn = document.querySelector('#lowercase')
+            const $input = document.querySelector('input')
+            const $p = document.querySelector('p')
+
+            // 합친것
+            const doUpperLower = (event)=>{
+                //alert(`event.target.innerHTML = ${event.target.innerHTML}`)
+                if ('대문자' === event.target.innerHTML) {
+                    let str1 = $input.value.toUpperCase()
+                    $p.innerHTML = str1
+                }
+                else {
+                    let str2 = $input.value.toLowerCase()
+                    $p.innerHTML = str2
+                }
+            }
+
+            $upperBtn.addEventListener('click', doUpperLower)
+            $lowerBtn.addEventListener('click', doUpperLower)
+            $input.addEventListener('keyup', (e)=>{
+                //alert(e.keyCode)
+                if (e.keyCode === 13) {
+                    //alert('enter키 누름')
+                    let str1 = $input.value.toUpperCase()
+                    $p.innerHTML = str1
+                    let str2 = $input.value.toLowerCase()
+                    $p.innerHTML = str2
+                }
+            })
+
+            // 따로한것
+            // $upperBtn.addEventListener('click',()=>{
+                //alert(`input.value = ${$input.value}`)
+            //    let str1 = $input.value.toUpperCase()
+            //    $p.innerHTML = str1
+            // })
+            // $lowerBtn.addEventListener('click',()=>{
+            //    let str2 = $input.value.toLowerCase()
+            //    $p.innerHTML = str2
+            //})
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="">
+    </div>
+    <div>
+        <button id="uppercase">대문자</button>
+        <button id="lowercase">소문자</button>
+    </div>
+    <p></p>
+</body>
+</html>
