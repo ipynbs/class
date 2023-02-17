@@ -44,6 +44,10 @@
             line-height: 40px;
             display: none;
         }
+        button{
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +59,7 @@
         "후회와 상처를 받지 않으려면 일보 후퇴하는 마음을 가지세요."<br>
         "현명하게 상황을 재 파악하는 감각을 길러보세요." -->
     </p>
-    <input type="button" value="처음으로" onclick="history.back()">
+    <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
+    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
 </body>
 </html>

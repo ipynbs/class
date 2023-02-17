@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const $h1 = document.querySelector('h1')
+            const $h2 = document.querySelector('h2')
+            const $input = document.querySelector('input')
+            const $label = document.querySelector('#guess')
+            const $button1 = document.querySelector('#submit')
+            const $button2 = document.querySelector('button')
+
+            $input.addEventListener('keyup',()=>{
+                console.log(`${input.text}`)
+            })
+            $button1.addEventListener('click',()=>{
+                console.log('input')
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>숫자 맞히기 게임</h1>
+    <h2>1에서 100 사이의 임의의 숫자를 입력해보세요.<br>
+     10바퀴 이내로 맞출 수 있는지 확인해 보세요.<br>
+     여러분의 추측이 너무 높거나 낮다면 저희가 알려드릴게요.</h2>
+    답 : <input type="text"><button id="submit">확인</button><br>
+    <label id="guess">추측한 값 : </label><br>
+    <br><button>새 게임</button>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<script>
+    try {
+        const array = new Array(777777777777777777777777777777)
+    } catch (error) {
+        console.log(error)
+        console.log()
+        console.log(`예외 이름 ${error.name}`)
+        console.log(`예외 메시지 ${error.message}`)
+    }
+</script>

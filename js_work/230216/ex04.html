@@ -1,0 +1,19 @@
+<script>
+    const doA = ()=>{
+        try {
+            console.log('aaa')
+            throw '강제 예외 발생'
+            // throw new Error ('강제 예외 발생')
+            // willExcept.test()
+            console.log('bbb')
+        } catch (error) {
+            console.log(error)
+            return
+        }
+        finally {
+            console.log("finally..")
+        }
+        console.log('last...') // return때문에 이건 나오지 않음
+    }
+    doA()
+</script>

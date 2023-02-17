@@ -44,6 +44,10 @@
             line-height: 40px;
             display: none;
         }
+        button{
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +59,7 @@
         "중요한 안건이나 결정은 잠시 보류하는 것도 최선책이군요."<br>
         "정신적인 스트레스가 상당한 하루이니까요." -->
     </p>
-    <input type="button" value="처음으로" onclick="history.back()">
+    <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
+    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
 </body>
 </html>

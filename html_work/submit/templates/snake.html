@@ -44,6 +44,10 @@
             line-height: 40px;
             display: none;
         }
+        button{
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +59,8 @@
         "혈기와 감정적인 분위기보다는 냉철한 이성이 필요하네요."<br>
         "마음먹은 대로 되지 않는다고 하더라도 순리라면 역행할 순 없겠지요." -->
     </p>
-    <input type="button" value="처음으로" onclick="history.back()">
+    <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
+    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
+
 </body>
 </html>

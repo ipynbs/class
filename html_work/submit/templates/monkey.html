@@ -44,6 +44,10 @@
             line-height: 40px;
             display: none;
         }
+        button{
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +59,7 @@
         "결재를 받을 일이 있거나 의논 드릴 일이 있다면 오늘이 기회이군요."<br>
         "도전정신과 신용으로 승부를 걸어 보세요." -->
     </p>
-    <input type="button" value="처음으로" onclick="history.back()">
+    <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
+    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
 </body>
 </html>

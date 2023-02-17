@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>과학</th>
+            <th>총점</th>
+            <th>평균</th>
+        </tr>
+    </table>
+    <button>추가</button>
+</body>
+</html>
+<script>
+    const $table = document.querySelector('table')
+    const $button = document.querySelector('button')
+
+    // const getSum = (s) => s.국어 + s.영어 + s.수학 + s.과학
+    // const getSum = (student)=> {return student.국어 + student.영어 + student.수학 + student.과학}
+    // const getAvg = (s) => s.getSum(s)/4
+
+    $button.addEventListener('click',()=>{
+        const students = []
+        students.push({이름:'구름',국어:87,영어:98,수학:95,과학:80})
+        students.push({이름:'별이',국어:80,영어:78,수학:85,과학:75})
+        students.push({이름:'겨울',국어:78,영어:88,수학:80,과학:60})
+        students.push({이름:'바다',국어:75,영어:90,수학:90,과학:85})
+        // console.log(JSON.stringify(students,null,2))
+
+        students.forEach((obj)=>{
+            obj.getSum = function (s) {return s.국어 + s.영어 + s.수학 + s.과학}
+            // const getSum = (student)=> {return student.국어 + student.영어 + student.수학 + student.과학}
+            obj.getAvg = function (s) {return s.getSum(s)/4}
+        })
+
+        students.forEach((obj)=>{
+            const $tr = document.createElement('tr')
+            const $tdName = document.createElement('td')
+            $tdName.textContent = obj.이름
+            const $tdKor = document.createElement('td')
+            $tdKor.textContent = obj.국어
+            const $tdEng = document.createElement('td')
+            $tdEng.textContent = obj.영어
+            const $tdMath = document.createElement('td')
+            $tdMath.textContent = obj.수학
+            const $tdSci = document.createElement('td')
+            $tdSci.textContent = obj.과학
+            const $tdAvg = document.createElement('td')
+            // $tdAvg.textContent = (obj.국어 + obj.영어 + obj.수학 + obj.과학)/4
+            $tdAvg.textContent = obj.getAvg(obj)
+            const $tdSum = document.createElement('td')
+            $tdSum.textContent = obj.getSum(obj)
+
+            $tr.appendChild($tdName)
+            $tr.appendChild($tdKor)
+            $tr.appendChild($tdEng)
+            $tr.appendChild($tdMath)
+            $tr.appendChild($tdSci)
+            $tr.appendChild($tdSum)
+            $tr.appendChild($tdAvg)
+            $table.appendChild($tr)
+        })
+    })
+
+    
+</script>
