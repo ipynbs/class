@@ -1,0 +1,38 @@
+<script>
+    class Retangle{
+        constructor(width,height) {
+            this.width = width
+            this.height = height
+        }
+        getPerimeter() {
+            return 2* (this.width+this.height)
+        }
+        getArea() {
+            return this.width*this.height
+        }
+    }
+    //class Square{
+    //    constructor(length) {
+    //        this.length = length
+    //   }
+    //    getPerimeter(){
+    //        return 4* (this.length)
+    //    }
+    //    getArea(){
+    //        return this.length*this.length
+    //    }
+    //}
+    class Square extends Retangle{
+        constructor(length){
+            if (length < 0)
+                alert('길이는 음수를 넣을수 없습니다')
+            super(length,length)
+        }
+    }
+    const a = new Square(10)
+    const b = new Retangle(20,30)
+    console.log(`a.getPerimeter = ${a.getPerimeter()} a.getArea = ${a.getArea()}`)
+    console.log(`b.getPerimeter = ${b.getPerimeter()} b.getArea = ${b.getArea()}`)
+
+    const c = new Square(-10)
+</script>
