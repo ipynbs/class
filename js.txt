@@ -1,0 +1,5 @@
+cd 23****
+
+npm init
+
+npm install --save-dev parcel

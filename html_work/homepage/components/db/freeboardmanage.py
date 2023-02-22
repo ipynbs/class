@@ -67,7 +67,7 @@ def selectPageRowCnt():
     return pageCnt, rowCnt
 
 
-def insert(title, content, writer):
+def insert(title, content, writer, star):
     db = pymysql.connect(
         host=host,
         port=port,
@@ -77,9 +77,9 @@ def insert(title, content, writer):
         charset=charset
     )
     sql = f"""INSERT INTO freeboard
-        (title,content,writer,regdate)
+        (title,content,writer,regdate,star)
         VALUES
-        ('{title}','{content}','{writer}',NOW())"""
+        ('{title}','{content}','{writer}',NOW(),'{star}')"""
     cursor = db.cursor()
     cursor.execute(sql)
     db.commit()

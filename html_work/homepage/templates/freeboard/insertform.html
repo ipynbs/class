@@ -1,16 +1,35 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container">
-    <h1>후기 작성하기</h1>
-    <form action="/freeboard/insertproc" method="post">
-        제목
-        <input class="form-control" type="text" name="title" id="">
-        내용
-        <textarea name="content" class="form-control"></textarea>
-        작성자
-        <input class="form-control" type="text" name="writer" id="">
-        <input class="btn btn-primary" type="submit" value="글작성">
-    </form>
+  <h1>후기 작성하기</h1>
+  <form action="/freeboard/insertproc" method="post" id="myform">
+    제목
+    <input class="form-control" type="text" name="title" id="" />
+    내용
+    <textarea name="content" class="form-control"></textarea>
+    작성자
+    <input class="form-control" type="text" name="writer" id="" />
+    <fieldset>
+      <span class="text-bold">별점을 선택해주세요</span>
+      <input type="radio" name="reviewStar" value="5" id="rate1" />
+      <label for="rate1">★</label>
+      <input type="radio" name="reviewStar" value="4" id="rate2" />
+      <label for="rate2">★</label>
+      <input type="radio" name="reviewStar" value="3" id="rate3" />
+      <label for="rate3">★</label>
+      <input type="radio" name="reviewStar" value="2" id="rate4" />
+      <label for="rate4">★</label>
+      <input type="radio" name="reviewStar" value="1" id="rate5" />
+      <label for="rate5">★</label>
+    </fieldset>
+    <div>
+      <textarea
+        class="col-auto form-control"
+        type="text"
+        id="reviewContents"
+        placeholder="좋은 수강평을 남겨주시면 감사하겠습니다"
+      ></textarea>
+    </div>
+    <input class="btn btn-primary" type="submit" value="글작성" />
+  </form>
 </div>
 {% endblock %}

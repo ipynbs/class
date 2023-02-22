@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="container">
-    <h1>freeboard/updateform.html</h1>
-    <form action="/freeboard/updateproc" method="post">
+    <h1>수정하기</h1>
+    <form action="/freeboard/updateproc" method="post" id="myform">
         <input type="hidden" name="idx" value="{{res[0]}}"/>
         제목
         <input class="form-control" type="text" name="title" id="" value="{{res[1]}}">
@@ -11,6 +11,27 @@
         <textarea name="content" class="form-control">{{res[2]}}</textarea>
         작성자
         <input class="form-control" type="text" name="writer" id="" value="{{res[3]}}">
+        <fieldset>
+            <span class="text-bold">별점을 선택해주세요</span>
+            <input type="radio" name="reviewStar" value="5" id="rate1" />
+            <label for="rate1">★</label>
+            <input type="radio" name="reviewStar" value="4" id="rate2" />
+            <label for="rate2">★</label>
+            <input type="radio" name="reviewStar" value="3" id="rate3" />
+            <label for="rate3">★</label>
+            <input type="radio" name="reviewStar" value="2" id="rate4" />
+            <label for="rate4">★</label>
+            <input type="radio" name="reviewStar" value="1" id="rate5" />
+            <label for="rate5">★</label>
+          </fieldset>
+          <div>
+            <textarea
+              class="col-auto form-control"
+              type="text"
+              id="reviewContents"
+              placeholder="좋은 수강평을 남겨주시면 감사하겠습니다"
+            ></textarea>
+          </div>
         <input class="btn btn-primary" type="submit" value="글수정">
     </form>
 </div>

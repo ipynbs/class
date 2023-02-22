@@ -1,0 +1,5 @@
+docker run -d --name mynginx -e TZ=UTC -p 80:80 -v ./js-work/230130/src:/var/www/html ubuntu/nginx
+
+docker run -d --name mynginx -e TZ=UTC -p 80:80 ubuntu/nginx
+
+docker run -d --name mynginx -e TZ=UTC -p 80:80 -v d:/work/js-work/230130/src:/var/www/html ubuntu/nginx

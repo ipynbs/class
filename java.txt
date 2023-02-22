@@ -1,0 +1,11 @@
+환경설정
+내문서 - 속성 - 관련설정 - 고급시스템설정 - 환경변수 - 시스템변수(S) - 새로만들기 -
+변수이름 : JAVA_HOME, 변수값 : c - programfiles - java - jdk19 까지 주소 복사 붙여넣기 -
+새로만들기 - 변수이름 : CLASSPATH, 변수값 : %JAVA_HOME%\lib - path 편집 - 새로만들기 - %JAVA_HOME%\bin - 제일 위로 올리기
+
+이클립스 다운로드 get eclipse ide 2022-12 - eclipse ide for java developers - install - launch - d드라이브 지정
+
+file - java - src에 모듈 지워도됨
+
+import 한거 불러오기
+import - General - Existing projexts into Workspace
