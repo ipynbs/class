@@ -38,7 +38,7 @@ def insertproc():
     title = request.form['title']
     content = request.form['content']
     writer = request.form['writer']
-    star = request.form['reviewStar']
+    star = request.form['rating']
     freeboardmanage.insert(title, content, writer, star)
 
     return redirect('/freeboard/select')
@@ -50,6 +50,7 @@ def updateproc():
     content = request.form['content']
     writer = request.form['writer']
     idx = request.form['idx']
+    # star = request.form['rating']
     freeboardmanage.update(title, content, writer, idx)
 
     return redirect('/freeboard/select')
