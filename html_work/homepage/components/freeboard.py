@@ -9,7 +9,7 @@ app = Blueprint('freeboard', __name__, url_prefix='/freeboard')
 def view():
     idx = int(request.args.get('idx'))
     res = freeboardmanage.selectRow(idx)
-    return render_template('freeboard/view.html', res=res)
+    return render_template('freeboard/view.html', res=res,starcnt = int(res[6]))
 
 
 @app.route("/select")
@@ -39,7 +39,7 @@ def insertproc():
     content = request.form['content']
     writer = request.form['writer']
     star = request.form['rating']
-    freeboardmanage.insert(title, content, writer, star)
+    freeboardmanage.insert(title, content, writer,star)
 
     return redirect('/freeboard/select')
 

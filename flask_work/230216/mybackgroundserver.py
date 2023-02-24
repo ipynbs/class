@@ -6,7 +6,7 @@ CORS(app)
 
 
 @app.route("/")
-# @cross_origin()
+@cross_origin()
 def indes():
     return "index"
 

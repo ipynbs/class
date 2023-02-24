@@ -15,7 +15,11 @@
     <h2>작성일자</h2>
     <p>{{res[5]}}</p>
     <h2>별점</h2>
-    <p>{{res[6]}}</p>
+    <p>
+        {% for i in range(starcnt) %}
+            {{'★'}}
+        {% endfor %}
+    </p>
     <div style="position: relative;">
         <div style="position: absolute;">
         <a class="btn btn-primary" href="/freeboard/select">목록</a>
