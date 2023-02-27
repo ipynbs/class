@@ -10,17 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         *{
+            padding: 0;
+            margin: 0;
             font-family: 'Pacifico', cursive;
-            background-color: ivory;
         }
         .animals{
-            display: block;
             width: 200px;
             height: 200px;
             border: solid 1px black;
             background-color: black;
             border-radius: 200px;
-            box-sizing: cover;
             background-position: center;
             color: white;
             text-align: center;
@@ -43,26 +42,46 @@
             color: black;
             text-align: center;
             font-size: 30px;
-            line-height: 40px;
             display: none;
         }
-        button{
-            display: block;
-            margin: auto;
+        .backvid>div{
+            width: 100vw;
+            height: 100vh;
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+        }
+        .bodytext{
+            position: absolute;
         }
     </style>
 </head>
 <body>
+    <div class="backvid">   
+        <video muted autoplay loop id="bgvid">
+            <source src="../static/vidio/말.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+<div class="bodytext">
+<div>
     <div class="animals" style="background-image: url(/static/말.jpg);">말</div>
     <h1 class="title">말띠의 운세는 !!</h1>
-    <p class="animal" id="animal7" style="display: block;">
+    <p class="animal" id="animal7" style="display: block; color:white">
         {{result}}
-        <!-- "오늘은 상황이 불리하다 하더라도, 시간이 흐르면서 당신에게 이로운 상황으로"<br>
-        "변할거에요. 현명한 사고는 걱정이나 불안감을 떨쳐 버리고"<br>
-        "목표를 향해 꾸준히 도전하는 것이예요." -->
+        <!-- "나보다 나이가 많은 손윗 사람을 만나기에는 최적의 날이에요."<br>
+        "결재를 받을 일이 있거나 의논 드릴 일이 있다면 오늘이 기회이군요."<br>
+        "도전정신과 신용으로 승부를 걸어 보세요." -->
     </p>
     <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
-    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
-    <!-- <a href="https://kr.freepik.com/free-vector/cute-horse-walking-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium_25847569.htm#page=2&query=horse%20illustration&position=9&from_view=search&track=ais">작가 catalyststuff</a> 출처 Freepik -->
+    <!-- <button class="btn btn-primary" onclick="history.back()">처음으로</button> -->
+    <div style=" text-align: center;">
+        <button onclick="history.back()" style=" display: inline-block;">처음으로</button>
+    </div>
+    <!-- <img src="/static/img/mouse-7759675_1280.png" alt="" height="230"> -->
+</div>
+</div>
 </body>
 </html>

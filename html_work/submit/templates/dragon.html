@@ -10,17 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         *{
+            padding: 0;
+            margin: 0;
             font-family: 'Pacifico', cursive;
-            background-color: ivory;
         }
         .animals{
-            display: block;
             width: 200px;
             height: 200px;
             border: solid 1px black;
             background-color: black;
             border-radius: 200px;
-            box-sizing: cover;
             background-position: center;
             color: white;
             text-align: center;
@@ -43,25 +42,46 @@
             color: black;
             text-align: center;
             font-size: 30px;
-            line-height: 40px;
             display: none;
         }
-        button{
-            display: block;
-            margin: auto;
+        .backvid>div{
+            width: 100vw;
+            height: 100vh;
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+        }
+        .bodytext{
+            position: absolute;
         }
     </style>
 </head>
 <body>
+    <div class="backvid">   
+        <video muted autoplay loop id="bgvid">
+            <source src="../static/vidio/용.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+<div class="bodytext">
+<div>
     <div class="animals" style="background-image: url(/static/용.jpg);">용</div>
     <h1 class="title">용띠의 운세는 !!</h1>
-    <p class="animal" id="animal5" style="display: block;">
+    <p class="animal" id="animal5" style="display: block; color:white">
         {{result}}
-        <!-- "오늘은 신중한 태도로 자신의 뜻을 조심스럽게 표현해야 해요."<br>
-        "중요한 안건이나 결정은 잠시 보류하는 것도 최선책이군요."<br>
-        "정신적인 스트레스가 상당한 하루이니까요." -->
+        <!-- "나보다 나이가 많은 손윗 사람을 만나기에는 최적의 날이에요."<br>
+        "결재를 받을 일이 있거나 의논 드릴 일이 있다면 오늘이 기회이군요."<br>
+        "도전정신과 신용으로 승부를 걸어 보세요." -->
     </p>
     <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
-    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
+    <!-- <button class="btn btn-primary" onclick="history.back()">처음으로</button> -->
+    <div style=" text-align: center;">
+        <button onclick="history.back()" style=" display: inline-block;">처음으로</button>
+    </div>
+    <!-- <img src="/static/img/mouse-7759675_1280.png" alt="" height="230"> -->
+</div>
+</div>
 </body>
 </html>

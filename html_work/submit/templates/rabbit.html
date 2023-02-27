@@ -16,17 +16,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <style>
         *{
+            padding: 0;
+            margin: 0;
             font-family: 'Pacifico', cursive;
-            background-color: ivory;
         }
         .animals{
-            display: block;
             width: 200px;
             height: 200px;
             border: solid 1px black;
             background-color: black;
             border-radius: 200px;
-            box-sizing: cover;
             background-position: center;
             color: white;
             text-align: center;
@@ -49,25 +48,46 @@
             color: black;
             text-align: center;
             font-size: 30px;
-            line-height: 40px;
             display: none;
         }
-        button{
-            display: block;
-            margin: auto;
+        .backvid>div{
+            width: 100vw;
+            height: 100vh;
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+        }
+        .bodytext{
+            position: absolute;
         }
     </style>
 </head>
 <body>
+    <div class="backvid">   
+        <video muted autoplay loop id="bgvid">
+            <source src="../static/vidio/토끼.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+<div class="bodytext">
+<div>
     <div class="animals" style="background-image: url(/static/토끼.jpg);">토끼</div>
     <h1 class="title">토끼띠의 운세는 !!</h1>
-    <p class="animal" id="animal4" style="display: block;">
+    <p class="animal" id="animal4" style="display: block; color:white">
         {{result}}
-        <!-- "조급하게 행동하면 힘들고 짜증스러운 일들이 도미노처럼 밀려들어 와요."<br>
-        "정도대로 그저 본업에 충실해야 할 하루 에요."<br>
-        "비즈니스에서는 내일을 위해 마인드 컨트롤이 중요해요." -->
+        <!-- "나보다 나이가 많은 손윗 사람을 만나기에는 최적의 날이에요."<br>
+        "결재를 받을 일이 있거나 의논 드릴 일이 있다면 오늘이 기회이군요."<br>
+        "도전정신과 신용으로 승부를 걸어 보세요." -->
     </p>
     <!-- <input type="button" value="처음으로" onclick="history.back()"> -->
-    <button class="btn btn-primary" onclick="history.back()">처음으로</button>
+    <!-- <button class="btn btn-primary" onclick="history.back()">처음으로</button> -->
+    <div style=" text-align: center;">
+        <button onclick="history.back()" style=" display: inline-block;">처음으로</button>
+    </div>
+    <!-- <img src="/static/img/mouse-7759675_1280.png" alt="" height="230"> -->
+</div>
+</div>
 </body>
 </html>
